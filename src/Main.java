@@ -1,15 +1,23 @@
 public class Main {
-    static int count=0;
 
-    Main(){
-        count++;
+    void add(int a , int b ){
+        int sum = a+b;
+        System.out.println("addition is "+sum);
+    }
+    void add(int a , int b , int c ){
+        int sum = a+b+c;
+        System.out.println("addition is "+sum);
 
+    }
+    void add( int a , int b ,int c , int d ){
+        int sum = a+b+c+d;
+        System.out.println("addition is "+sum);
     }
 
     public static void main(String[] args) {
-       Main sc = new Main();
-        Main sc1 = new Main();
-        Main scj= new Main();
-        System.out.println("total number of object are "+count);
+        Main sc = new Main();
+        sc.add(10,20);
+        sc.add(10,20,30);
+        sc.add(10,20,30,40);
     }
 }
