@@ -1,23 +1,22 @@
 public class Main {
 
-    void add(int a , int b ){
-        int sum = a+b;
-        System.out.println("addition is "+sum);
+    void area(int a){
+        int area = a*a;
+        System.out.println("area of square is "+area );
     }
-    void add(int a , int b , int c ){
-        int sum = a+b+c;
-        System.out.println("addition is "+sum);
-
+    void area(int l , int b){
+        int area = l*b;
+        System.out.println("area of rectangle is "+area);
     }
-    void add( int a , int b ,int c , int d ){
-        int sum = a+b+c+d;
-        System.out.println("addition is "+sum);
+    void area(float r){
+        float area = (float)(Math.PI*r*r);
+        System.out.println("area of circle is "+area);
     }
 
     public static void main(String[] args) {
         Main sc = new Main();
-        sc.add(10,20);
-        sc.add(10,20,30);
-        sc.add(10,20,30,40);
+        sc.area(6);
+        sc.area(12,10);
+        sc.area(5f);
     }
 }
