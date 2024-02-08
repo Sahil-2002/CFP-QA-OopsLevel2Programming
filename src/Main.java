@@ -1,43 +1,15 @@
-import java.util.Scanner;
+public class Main {
+    static int count=0;
 
-public class Main{
-    static int l, b, h;
-
-    void input(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("enter the length breadth and height ");
-        l= sc.nextInt();
-        b=sc.nextInt();
-        h= sc.nextInt();;
-
-    }
-    int volume( ){
-
-        int volume = l*b*h;
-        return volume;
-
-    }
-    int area(){
-
-        int area = 2*((l*b)+(b*h)+(l*h));
-        return area;
-
-    }
-    int perimeter(){
-        int peri = 4*(l+b+h);
-        return peri;
+    Main(){
+        count++;
 
     }
 
     public static void main(String[] args) {
-        Main sc = new Main();
-        sc.input();
-        int volume = sc.volume();
-        System.out.println("volume of cuboid is "+volume);
-        int area = sc.area();
-        System.out.println("area of cuboid is "+area);
-        int peri = sc.perimeter();
-        System.out.println("perimeter of cuboid is "+peri);
-
+       Main sc = new Main();
+        Main sc1 = new Main();
+        Main scj= new Main();
+        System.out.println("total number of object are "+count);
     }
 }
