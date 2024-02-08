@@ -1,45 +1,43 @@
 import java.util.Scanner;
-/*We make a method named input which is used to get input from the user.
-We also make a method named add which is used to perform addition and return the result
-back to input method where we finally print the result.
 
-*
- */
-public class Main {
-    int a, b, add ;
-    public void input() {
+public class Main{
+    static int l, b, h;
 
+    void input(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("enter the value of a : ");
-        a = sc.nextInt();
-        System.out.println("enter the value of b : ");
-        b = sc.nextInt();
-        int add =add();
-        int sub = sub();
-
-        System.out.println("addition is "+add);
-        System.out.println("subtraction is "+sub);
-
+        System.out.println("enter the length breadth and height ");
+        l= sc.nextInt();
+        b=sc.nextInt();
+        h= sc.nextInt();;
 
     }
-    public int add(){
-        add = a+b;
-        return add;
-    }
-    public int sub(){
-        int sub = a-b;
-        return sub;
+    int volume( ){
+
+        int volume = l*b*h;
+        return volume;
 
     }
+    int area(){
 
+        int area = 2*((l*b)+(b*h)+(l*h));
+        return area;
+
+    }
+    int perimeter(){
+        int peri = 4*(l+b+h);
+        return peri;
+
+    }
 
     public static void main(String[] args) {
         Main sc = new Main();
-
         sc.input();
-
-
+        int volume = sc.volume();
+        System.out.println("volume of cuboid is "+volume);
+        int area = sc.area();
+        System.out.println("area of cuboid is "+area);
+        int peri = sc.perimeter();
+        System.out.println("perimeter of cuboid is "+peri);
 
     }
 }
-
